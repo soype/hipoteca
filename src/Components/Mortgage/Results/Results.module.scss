@@ -1,0 +1,13 @@
+@use "../../../styles/abstracts/index" as *;
+
+.results{
+    background-color: $background-dark;
+    flex: 1;
+    padding: 1rem;
+    *{
+        color: white;
+    }
+    @media all and (min-width: 768px) {
+        border-bottom-left-radius: 4rem;
+    }
+}

@@ -1,0 +1,22 @@
+@use "../../styles/abstracts/index" as *;
+
+.mortgage {
+    background: $background-light;
+    padding: 2rem;
+    height: 100dvh;
+}
+
+.mortgage-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+
+    @media all and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+

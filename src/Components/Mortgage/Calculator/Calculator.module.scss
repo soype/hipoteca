@@ -1,0 +1,129 @@
+@use "../../../styles/abstracts/index" as *;
+
+.calculator {
+  flex: 1;
+  padding: 1rem;
+
+  @media all and (min-width: 768px) {
+    padding: 2rem;
+  }
+
+  .clear{
+    border: none;
+    background: none;
+    text-align: left;
+    color: $color-slate-500;
+    font-size: .8rem;
+    font-weight: 500;
+    text-decoration: underline;
+    padding: unset;
+    padding-top: .5rem;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  label{
+    font-size: .9rem;
+    font-weight: 700;
+    color: $color-slate-500;
+  }
+
+  .field{
+    
+  }
+
+  .field-container{
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    margin: .5rem 0;
+    transition: all .3s ease-in-out;
+    position: relative; 
+
+    .symbol{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);      
+      padding: .5rem;
+      background-color: $color-slate-300;
+      color: $color-slate-700;
+      font-weight: 700;
+      font-size: .8rem;
+      line-height: 1rem;
+      pointer-events: none;
+      height: calc(100% - 4px);
+      display: flex;
+      align-items: center;
+    }
+
+    .symbol--left{
+      
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    .symbol--right{
+      right: 0;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    .input{
+      flex: 1;
+      border: none;
+      font-size: 1rem;
+      caret-color: transparent;
+      height: 3rem;
+      line-height: 1rem;
+      border: 2px solid $color-slate-500;
+      border-radius: .5rem;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+
+      &:focus{
+        outline: none;
+        border: 2px solid $color-lime;
+      }
+      padding: 0 .5rem;
+      padding-left: 32px;
+    }
+
+    &--right{
+      .input{
+        padding: 0 .5rem;  
+      }
+    }
+  }
+
+  .submit{
+    border-radius: 1rem;
+    border: none;
+    background: $color-lime;
+    // text-align: left;
+    color: $color-slate-900;
+    font-weight: 700;
+    padding: 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover{
+      background: $color-lime-dark;
+      color: $color-slate-900;
+    }
+  }
+
+  .error{
+    margin: 0;
+    padding: 0;
+    color: $color-red;
+  }
+
+  .global-error{
+    color: $color-red;
+    font-weight: 700;
+  }
+}
