@@ -93,7 +93,7 @@
             "name": "houseValue",
             "label": "House Value",
             "error": "Enter a house value",
-            "placeholder": "Example: 100,000,000"
+            "placeholder": "Example: 200,000"
           },
           "field2": {
             "symbol": "%",
@@ -107,7 +107,7 @@
             "name": "loanAmount",
             "label": "Loan Amount",
             "error": "Enter a loan amount",
-            "placeholder": "Example: 80,000,000"
+            "placeholder": "Example: 160,000"
           },
           "field4": {
             "symbol": "%",

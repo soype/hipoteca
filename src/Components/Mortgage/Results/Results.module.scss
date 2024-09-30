@@ -17,26 +17,69 @@
     padding: 2rem 0;
     position: relative;
     z-index: 1;
+    opacity: 0;
 
     &--placeholder{
         padding: 2rem 0;
     }
+
+    animation: appear 1s ease-in-out forwards;
+    animation-delay: .5s;
 }
 
 .house{
     position: absolute;
-    bottom: 0;
-    right: 0;
     z-index: 0;
-    width: 250px;
+    // opacity: 0;
 
-    // @media all and (max-width: 1000px){
-    //   bottom: 60px;
-    //   width: 200px;
-    //   right: 0;
-    // }
     @media all and (max-width: 768px){
       width: 80px;
       right: 10px;
+    }
+
+    &--bottom-right{
+        bottom: 0;
+        right: 0;
+        width: 250px;
+    }
+
+    &--center{
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+        max-width: 400px;
+    }
+
+    &--animate{
+        opacity: 0;
+        animation: appear-disappear 1.5s ease-in-out forwards;
+    }
+  }
+
+  @keyframes appear-disappear{
+    0%{
+      opacity: 1;
+    //   transform: translateY(0);
+    }
+    33%{
+      opacity: 0;
+    //   transform: translateY(100px);
+    }
+    66%{
+        opacity: 0;
+        // transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        // transform: translateY(0);
+    }
+  }
+
+  @keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
   }
