@@ -3,7 +3,11 @@
 .mortgage {
     background: $background-light;
     padding: 2rem;
-    height: 100dvh;
+    
+
+    @media all and (min-width: 768px) {
+        height: 100vh;
+    }
 }
 
 .mortgage-container {

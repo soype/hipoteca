@@ -3,11 +3,19 @@
 .results{
     background-color: $background-dark;
     flex: 1;
-    padding: 1rem;
+    padding: 2rem;
     *{
         color: white;
     }
     @media all and (min-width: 768px) {
         border-bottom-left-radius: 4rem;
+    }
+}
+
+.content{
+    padding: 1rem 0;
+
+    &--placeholder{
+        padding: 1rem 0;
     }
 }

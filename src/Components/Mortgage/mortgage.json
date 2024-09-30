@@ -1,83 +1,77 @@
 {
+  "title": "Calcula tu hipoteca",
+  "description": "Calculadora de hipotecas",
+  "language": "es",
+  "calculator": {
     "title": "Calcula tu hipoteca",
     "description": "Calculadora de hipotecas",
-    "language": "es",
-    "calculator": {
-      "title": "Calcula tu hipoteca",
-      "description": "Calculadora de hipotecas",
-      "form": {
-        "fields": {
-          "field1": {
-            "symbol": "$",
-            "name": "houseValue",
-            "label": "Valor de la vivienda",
-            "error": "Ingrese un valor de la vivienda",
-            "placeholder": "Ejemplo: 100.000.000"
-          },
-          "field2": {
-            "symbol": "$",
-            "name": "loanAmount",
-            "label": "Monto a solicitar",
-            "error": "Ingrese un monto a solicitar",
-            "placeholder": "Ejemplo: 80.000.000"
-          },
-          "field3": {
-            "symbol": "%",
-            "name": "loanMax",
-            "label": "Máximo financiable",
-            "error": "Ingrese el máximo % de financiación",
-            "placeholder": "El porcentaje máximo de financiación"
-          },
-          "field4": {
-            "symbol": "%",
-            "name": "interestRate",
-            "label": "Tasa de interés",
-            "error": "Ingrese una tasa de interés",
-            "placeholder": "Tasa de interés del crédito"
-          },
-          "field5": {
-            "symbol": "años",
-            "name": "loanDuration",
-            "label": "Duración del préstamo",
-            "error": "Ingrese la duración del préstamo",
-            "placeholder": "Cuántos años durará el préstamo"
-          },
-          "field6": {
-            "symbol": "$",
-            "name": "salary",
-            "label": "(Opcional) Salario del solicitante)",
-            "error": "Importe insuficiente",
-            "placeholder": "Ingrese el salario del solicitante"
-          }
+    "form": {
+      "fields": {
+        "field1": {
+          "symbol": "$",
+          "name": "houseValue",
+          "label": "Valor de la vivienda",
+          "error": "Ingrese un valor de la vivienda",
+          "placeholder": "Ejemplo: 100.000.000"
         },
-        "submit": "Calcular cuotas",
-        "clear": "Despejar formulario"
-      }
-    },
-    "results": {
-      "title": "Resultados de tu hipoteca",
-      "description": "Resultados de tu hipoteca",
-      "form": {
-        "title": "Resultados de tu hipoteca",
-        "description": "Resultados de tu hipoteca",
-        "fields": {
-          "title": "Resultados de tu hipoteca",
-          "description": "Resultados de tu hipoteca",
-          "data": {
-            "title": "Resultados de tu hipoteca",
-            "monthlyPayment": "Tu cuota será de aproximadamente ",
-            "CABA": "Si tu compra es en CABA, tené en cuenta estos gastos:",
-            "escritura": "Gastos de escritura (1,5%): ",
-            "escribano": "Gastos de escribano (2%): ",
-            "inmobiliaria": "Gastos de inmobiliaria (4%): ",
-            "total": "Para acceder a este crédito necesitarás al menos "
-          }
+        "field2": {
+          "symbol": "%",
+          "name": "loanMax",
+          "label": "Máximo financiable",
+          "error": "Ingrese el máximo % de financiación",
+          "placeholder": "El porcentaje máximo de financiación"
+        },
+        "field3": {
+          "symbol": "$",
+          "name": "loanAmount",
+          "label": "Monto a solicitar",
+          "error": "Ingrese un monto a solicitar",
+          "placeholder": "Ejemplo: 80.000.000"
+        },
+        "field4": {
+          "symbol": "%",
+          "name": "interestRate",
+          "label": "Tasa de interés",
+          "error": "Ingrese una tasa de interés",
+          "placeholder": "Tasa de interés del crédito"
+        },
+        "field5": {
+          "symbol": "años",
+          "name": "loanDuration",
+          "label": "Duración del préstamo",
+          "error": "Ingrese la duración del préstamo",
+          "placeholder": "Cuántos años durará el préstamo"
+        },
+        "field6": {
+          "symbol": "$",
+          "name": "salary",
+          "label": "(Opcional) relación ingresos/cuota",
+          "error": "Importe insuficiente",
+          "placeholder": "30%"
         }
-      }
-    },
-    "footer": {
-      "title": "Calcula tu hipoteca",
-      "description": "Calcula tu hipoteca"
+      },
+      "submit": "Calcular cuotas",
+      "clear": "Despejar formulario"
     }
+  },
+  "results": {
+    "title": "Resultado",
+    "description": "Resultados de tu hipoteca",
+    "fields": {
+      "title": "Resultados de tu hipoteca",
+      "monthlyPayment": "Tu cuota será de aproximadamente ",
+      "CABA": "Si tu compra es en CABA, tené en cuenta estos gastos:",
+      "escritura": "Gastos de escritura (1,5%): ",
+      "escribano": "Gastos de escribano (2%): ",
+      "inmobiliaria": "Gastos de inmobiliaria (4%): ",
+      "initialPayment": "Para acceder a este crédito necesitarás al menos ",
+      "disclaimer": "Tené en cuenta que estos valores son aproximados y el banco o entidad prestamista puede adicionar gastos como seguro de vida entre otros. \b",
+      "salary": "Para solicitar este crédito, deberías tener ingresos mensuales de al menos ",
+      "salary2": ". Si no ingresaste ningún valor, se asume por defecto una relación máxima entre la cuota y tus ingresos del 30%."
+    }
+  },
+  "footer": {
+    "title": "Calcula tu hipoteca",
+    "description": "Calcula tu hipoteca"
   }
-  
+}
