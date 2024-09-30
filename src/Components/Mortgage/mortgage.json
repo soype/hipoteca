@@ -1,6 +1,6 @@
 {
   "es": {
-    "title": "Calculadora de hipoteca",
+    "title": "Simulador de hipoteca",
     "description": "Calculadora de hipoteca",
     "language": "es",
     "calculator": {
@@ -80,7 +80,7 @@
     }
   },
   "en": {
-    "title": "Mortgage Calculator",
+    "title": "Mortgage Simulator",
     "description": "Mortgage Calculator",
     "language": "en",
     "calculator": {
