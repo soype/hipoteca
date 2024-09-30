@@ -109,11 +109,11 @@ const Calculator = ({ title, form, setResult }) => {
   };
 
   const houseValueHandler = (event) => {
-    setHouseValue(event.target.value);
+    setHouseValue(event.currentTarget.value);
   };
 
   const loanMaxHandler = (event) => {
-    setLoanMax(event.target.value);
+    setLoanMax(event.currentTarget.value);
   };
 
   useEffect(() => {
@@ -121,11 +121,23 @@ const Calculator = ({ title, form, setResult }) => {
     if (houseValue > 0 && loanMax > 0) {
       setEnableLoanAmount(false);
       setMaxLoanAmount((loanMax / 100) * houseValue);
+    }else{
+      setEnableLoanAmount(true);
+      setMaxLoanAmount(0);
+      setLoanAmount(0);
     }
   }, [houseValue, loanMax]);
 
   const loanAmountHandler = (event) => {
-    setLoanAmount(event.target.value);
+    setLoanAmount(event.currentTarget.value);
+  };
+
+  const formatCurrency = (value) => {
+    const formatter = new Intl.NumberFormat(navigator.language, {
+      style: 'currency',
+      currency: 'USD',
+    });
+    return formatter.format(value);
   };
 
   return (
@@ -148,7 +160,7 @@ const Calculator = ({ title, form, setResult }) => {
                   </div>
                 ) : field.name === "loanAmount" ? (
                   <div className={`${styles["field-container"]} ${styles["loan-amount"]} ${field.symbol.length > 1 && styles["field-container--right"]}`}>
-                    <p>{loanAmount}</p>
+                    <p>{formatCurrency(loanAmount)}</p>
                     <input className={styles.input} id={field.name} name={field.name} type="range" min="0" max={maxLoanAmount} onChange={loanAmountHandler} disabled={enableLoanAmount} placeholder={field.placeholder} />
                     {field.symbol.length > 1 && <span className={`${styles.symbol} ${styles["symbol--right"]}`}>{field.symbol}</span>}
                   </div>
