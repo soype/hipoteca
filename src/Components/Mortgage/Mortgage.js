@@ -8,6 +8,7 @@ import Calculator from "./Calculator/Calculator";
 import Results from "./Results/Results";
 
 import { ReactComponent as BankLoan } from "../../assets/bank-loan.svg";
+import { ReactComponent as Dot } from "../../assets/dot.svg";
 
 export default function Mortgage() {
   const [result, setResult] = useState({});
@@ -45,7 +46,6 @@ export default function Mortgage() {
           <Results data={data.results} result={result}></Results>
         </div>
       </div>
-      <BankLoan className={styles.bank} />
       <footer className={styles.footer}>
         <div className={styles.footer__content}>
           <div className={styles.footer__content__left}></div>
@@ -59,6 +59,8 @@ export default function Mortgage() {
           </div>
         </div>
       </footer>
+      <BankLoan className={styles.bank} />
+      <Dot className={styles.dot} />
     </>
   );
 }
