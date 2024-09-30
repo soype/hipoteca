@@ -6,7 +6,7 @@ import { ReactComponent as HouseTalking } from "../../../assets/house-talking.sv
 
 const Results = ({ result, data }) => {
   const [animate, setAnimate] = React.useState(false);
-  const [housePosition, setHousePosition] = React.useState("bottom-right");
+  const [housePosition, setHousePosition] = React.useState("center");
 
   React.useEffect(() => {
     const animationTime = 1500;
