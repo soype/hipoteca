@@ -1,77 +1,158 @@
 {
-  "title": "Calcula tu hipoteca",
-  "description": "Calculadora de hipotecas",
-  "language": "es",
-  "calculator": {
-    "title": "Calcula tu hipoteca",
-    "description": "Calculadora de hipotecas",
-    "form": {
+  "es": {
+    "title": "Calculadora de hipoteca",
+    "description": "Calculadora de hipoteca",
+    "language": "es",
+    "calculator": {
+      "title": "Calcula tu hipoteca",
+      "description": "Calculadora de hipotecas",
+      "form": {
+        "fields": {
+          "field1": {
+            "symbol": "$",
+            "name": "houseValue",
+            "label": "Valor de la vivienda",
+            "error": "Ingrese un valor de la vivienda",
+            "placeholder": "Ejemplo: 100.000.000"
+          },
+          "field2": {
+            "symbol": "%",
+            "name": "loanMax",
+            "label": "Máximo financiable",
+            "error": "Ingrese el máximo % de financiación",
+            "placeholder": "El porcentaje máximo de financiación"
+          },
+          "field3": {
+            "symbol": "$",
+            "name": "loanAmount",
+            "label": "Monto a solicitar",
+            "error": "Ingrese un monto a solicitar",
+            "placeholder": "Ejemplo: 80.000.000"
+          },
+          "field4": {
+            "symbol": "%",
+            "name": "interestRate",
+            "label": "Tasa de interés",
+            "error": "Ingrese una tasa de interés",
+            "placeholder": "Tasa de interés del crédito"
+          },
+          "field5": {
+            "symbol": "años",
+            "name": "loanDuration",
+            "label": "Duración del préstamo",
+            "error": "Ingrese la duración del préstamo",
+            "placeholder": "Duración en años"
+          },
+          "field6": {
+            "symbol": "$",
+            "name": "salary",
+            "label": "(Opcional) relación ingresos/cuota",
+            "error": "Importe insuficiente",
+            "placeholder": "30%"
+          }
+        },
+        "submit": "Calcular cuotas",
+        "clear": "Despejar formulario"
+      }
+    },
+    "results": {
+      "title": "Resultado",
+      "description": "Resultados de tu hipoteca",
+      "placeholder": "Completá el formulario para calcular tu hipoteca",
       "fields": {
-        "field1": {
-          "symbol": "$",
-          "name": "houseValue",
-          "label": "Valor de la vivienda",
-          "error": "Ingrese un valor de la vivienda",
-          "placeholder": "Ejemplo: 100.000.000"
-        },
-        "field2": {
-          "symbol": "%",
-          "name": "loanMax",
-          "label": "Máximo financiable",
-          "error": "Ingrese el máximo % de financiación",
-          "placeholder": "El porcentaje máximo de financiación"
-        },
-        "field3": {
-          "symbol": "$",
-          "name": "loanAmount",
-          "label": "Monto a solicitar",
-          "error": "Ingrese un monto a solicitar",
-          "placeholder": "Ejemplo: 80.000.000"
-        },
-        "field4": {
-          "symbol": "%",
-          "name": "interestRate",
-          "label": "Tasa de interés",
-          "error": "Ingrese una tasa de interés",
-          "placeholder": "Tasa de interés del crédito"
-        },
-        "field5": {
-          "symbol": "años",
-          "name": "loanDuration",
-          "label": "Duración del préstamo",
-          "error": "Ingrese la duración del préstamo",
-          "placeholder": "Cuántos años durará el préstamo"
-        },
-        "field6": {
-          "symbol": "$",
-          "name": "salary",
-          "label": "(Opcional) relación ingresos/cuota",
-          "error": "Importe insuficiente",
-          "placeholder": "30%"
-        }
-      },
-      "submit": "Calcular cuotas",
-      "clear": "Despejar formulario"
+        "title": "Resultados de tu hipoteca",
+        "monthlyPayment": "Tu cuota será de aproximadamente ",
+        "CABA": "Si tu compra es en CABA, tené en cuenta estos gastos:",
+        "escritura": "Gastos de escritura (1,5%): ",
+        "escribano": "Gastos de escribano (2%): ",
+        "inmobiliaria": "Gastos de inmobiliaria (4%): ",
+        "initialPayment": "Para acceder a este crédito necesitarás al menos ",
+        "disclaimer": "Tené en cuenta que estos valores son aproximados y el banco o entidad prestamista puede adicionar gastos como seguro de vida entre otros. \b",
+        "salary": "Para solicitar este crédito, deberías tener ingresos mensuales de al menos ",
+        "salary2": ". Si no ingresaste ningún valor, se asume por defecto una relación máxima entre la cuota y tus ingresos del 30%."
+      }
+    },
+    "footer": {
+      "title": "Calcula tu hipoteca",
+      "description": "Calcula tu hipoteca"
     }
   },
-  "results": {
-    "title": "Resultado",
-    "description": "Resultados de tu hipoteca",
-    "fields": {
-      "title": "Resultados de tu hipoteca",
-      "monthlyPayment": "Tu cuota será de aproximadamente ",
-      "CABA": "Si tu compra es en CABA, tené en cuenta estos gastos:",
-      "escritura": "Gastos de escritura (1,5%): ",
-      "escribano": "Gastos de escribano (2%): ",
-      "inmobiliaria": "Gastos de inmobiliaria (4%): ",
-      "initialPayment": "Para acceder a este crédito necesitarás al menos ",
-      "disclaimer": "Tené en cuenta que estos valores son aproximados y el banco o entidad prestamista puede adicionar gastos como seguro de vida entre otros. \b",
-      "salary": "Para solicitar este crédito, deberías tener ingresos mensuales de al menos ",
-      "salary2": ". Si no ingresaste ningún valor, se asume por defecto una relación máxima entre la cuota y tus ingresos del 30%."
+  "en": {
+    "title": "Mortgage Calculator",
+    "description": "Mortgage Calculator",
+    "language": "en",
+    "calculator": {
+      "title": "Calculate",
+      "description": "Mortgage Calculator",
+      "form": {
+        "fields": {
+          "field1": {
+            "symbol": "$",
+            "name": "houseValue",
+            "label": "House Value",
+            "error": "Enter a house value",
+            "placeholder": "Example: 100,000,000"
+          },
+          "field2": {
+            "symbol": "%",
+            "name": "loanMax",
+            "label": "Maximum Financing",
+            "error": "Enter the maximum % of financing",
+            "placeholder": "The maximum financing percentage"
+          },
+          "field3": {
+            "symbol": "$",
+            "name": "loanAmount",
+            "label": "Loan Amount",
+            "error": "Enter a loan amount",
+            "placeholder": "Example: 80,000,000"
+          },
+          "field4": {
+            "symbol": "%",
+            "name": "interestRate",
+            "label": "Interest Rate",
+            "error": "Enter an interest rate",
+            "placeholder": "Loan interest rate"
+          },
+          "field5": {
+            "symbol": "years",
+            "name": "loanDuration",
+            "label": "Loan Duration",
+            "error": "Enter the loan duration",
+            "placeholder": "Loan duration (years)"
+          },
+          "field6": {
+            "symbol": "$",
+            "name": "salary",
+            "label": "(Optional) Income/Installment Ratio",
+            "error": "Insufficient amount",
+            "placeholder": "30%"
+          }
+        },
+        "submit": "Calculate Payments",
+        "clear": "Clear Form"
+      }
+    },
+    "results": {
+      "title": "Result",
+      "description": "Your Mortgage Results",
+      "placeholder": "Complete the form to calculate your mortgage",
+      "fields": {
+        "title": "Your Mortgage Results",
+        "monthlyPayment": "Your payment will be approximately ",
+        "CABA": "If your purchase is in CABA, consider these expenses:",
+        "escritura": "Deed Expenses (1.5%): ",
+        "escribano": "Notary Fees (2%): ",
+        "inmobiliaria": "Real Estate Fees (4%): ",
+        "initialPayment": "To access this loan, you will need at least ",
+        "disclaimer": "Note that these values are approximate and the bank or lending entity may add expenses such as life insurance, among others. \b",
+        "salary": "To apply for this loan, you should have a monthly income of at least ",
+        "salary2": ". If you did not enter any value, a default maximum ratio between the installment and your income of 30% is assumed."
+      }
+    },
+    "footer": {
+      "title": "Calculate Your Mortgage",
+      "description": "Calculate Your Mortgage"
     }
-  },
-  "footer": {
-    "title": "Calcula tu hipoteca",
-    "description": "Calcula tu hipoteca"
   }
 }

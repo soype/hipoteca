@@ -3,24 +3,93 @@
 .mortgage {
     background: $background-light;
     padding: 2rem;
-    
+    position: relative;
 
     @media all and (min-width: 768px) {
-        height: 100vh;
+        height: clamp(100%, 100vh, 100vh);
     }
 }
 
 .mortgage-container {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #eddfd5;
     border-radius: 1rem;
     overflow: hidden;
     max-width: 1200px;
     margin: auto;
+    position: relative;
+    z-index: 1;
 
     @media all and (min-width: 768px) {
         flex-direction: row;
     }
 }
 
+.header{
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    gap: 1rem;
+
+    @media all and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.title{
+    color: $color-slate-500;
+    width: 100%;
+    text-align: center;
+    margin: unset;
+
+    @media all and (max-width: 768px) {
+        text-align: left;
+        margin-top: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+.language{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    .language-selection{
+        background-color: $background-light;
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        color: $color-slate-500;
+        font-weight: 700;
+        border: 2px solid $color-slate-500;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            // background-color: $color-lime;
+            color: $color-slate-900;
+            border-color: $color-slate-900;
+        }
+    }
+    @media all and (max-width: 768px) {
+        position: relative;
+        top: unset;
+        right: unset;
+    }
+}
+
+.bank{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 300px;
+    display: none;
+
+    @media all and (min-width: 768px) {
+      display: block;
+    }
+}

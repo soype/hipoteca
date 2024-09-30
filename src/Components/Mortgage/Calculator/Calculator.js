@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import styles from "./Calculator.module.scss";
 
+import { ReactComponent as BankClient } from "../../../assets/bank-client.svg";
+
 const Calculator = ({ title, form, setResult }) => {
   //   const [state, formAction] = useFormState(calculateMortgage, { error: null, message: null });
 
@@ -39,11 +41,16 @@ const Calculator = ({ title, form, setResult }) => {
 
     // Check for empty fields
     for (const [key, value] of Object.entries(data)) {
-      if (key !== "salary") {
-        if (value.length < 1 || value === null) {
-          errorMessage = "Por favor, ingresá todos los datos necesarios";
+      if(value){
+        if (key !== "salary") {
+          if (value.length < 1 || value === null) {
+            errorMessage = "Por favor, ingresá todos los datos necesarios";
+          }
         }
+      }else{
+        errorMessage = "Por favor, ingresá todos los datos necesarios";
       }
+      
     }
 
     // Check for negative values
@@ -79,7 +86,6 @@ const Calculator = ({ title, form, setResult }) => {
     const inmobiliaria = data.houseValue * 0.04 + data.houseValue * 0.04 * 0.21;
 
     const downpayment = data.houseValue - data.loanAmount;
-    console.log("Downpayment: ", downpayment);
 
     const initialPayment = escritura + escribano + inmobiliaria + downpayment;
 
@@ -106,6 +112,7 @@ const Calculator = ({ title, form, setResult }) => {
     // Reset the result and error messages
     setResult({});
     setErrorMessage("");
+    setEnableLoanAmount(true);
   };
 
   const houseValueHandler = (event) => {
@@ -178,6 +185,8 @@ const Calculator = ({ title, form, setResult }) => {
         {errorMessage.length > 0 && <p className={styles.error}>{errorMessage}</p>}
         <button className={styles.submit}>{form.submit}</button>
       </form>
+      <BankClient className={styles.bank} />
+      
     </div>
   );
 };

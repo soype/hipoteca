@@ -3,6 +3,12 @@
 .calculator {
   flex: 1;
   padding: 1rem;
+  position: relative;
+
+  h2{
+    color: $background-dark;
+    z-index: 1;
+  }
 
   @media all and (min-width: 768px) {
     padding: 2rem;
@@ -43,6 +49,7 @@
     margin: .5rem 0;
     transition: all .3s ease-in-out;
     position: relative; 
+    z-index: 1;
 
     .symbol{
       position: absolute;
@@ -123,7 +130,32 @@
     transition: all .3s ease-in-out;
     &:hover{
       background: $color-lime-dark;
-      color: $color-slate-900;
+      color: $color-slate-700;
+    }
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .bank{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    max-width: 250px;
+
+    @media all and (max-width: 1000px){
+      top: 60px;
+      width: 200px;
+    }
+
+    @media all and (max-width: 768px){
+      top: 80px;
+      width: 150px;
+    }
+    
+    @media all and (max-width: 360px){
+      display: none;
     }
   }
 

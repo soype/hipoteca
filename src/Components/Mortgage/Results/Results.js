@@ -1,12 +1,12 @@
 import React from "react";
 
 import styles from "./Results.module.scss";
-import data from "../mortgage.json";
 
-const Results = ({result}) => {
+import { ReactComponent as HouseTalking } from "../../../assets/house-talking.svg";
 
-  const text = data.results.fields;
-  const title = data.results.title;
+const Results = ({result, data}) => {
+
+  const text = data.fields;
 
   // format monthly payment to currency using the user's locale
   const formatCurrency = (value) => {
@@ -18,7 +18,7 @@ const Results = ({result}) => {
   };
   
   return <div className={styles.results}>
-    <h2>{title}</h2>
+    <h2>{data.title}</h2>
     {result.monthlyPayment ? <div className={styles.content}>
       <p>{text.monthlyPayment}<strong>{formatCurrency(result.monthlyPayment)}</strong></p>
       <p>{text.CABA}</p>
@@ -28,7 +28,8 @@ const Results = ({result}) => {
       <p>{text.initialPayment}<strong>{formatCurrency(result.initialPayment)}</strong></p>
       <p>{text.disclaimer}</p>
       <p>{text.salary}<strong>{formatCurrency(result.salary)}</strong>{text.salary2}</p>
-    </div> : <p className={styles['content--placeholder']}>Completá el formulario para calcular tu hipoteca</p>}
+    </div> : <p className={styles['content--placeholder']}>{data.placeholder}</p>}
+    <HouseTalking className={styles.house} />
   </div>;
 };
 
