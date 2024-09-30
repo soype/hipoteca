@@ -30,7 +30,7 @@ export default function Mortgage() {
   };
 
   return (
-    <div className={styles.mortgage}>
+    <>
       <div className={styles.header}>
         <h1 className={styles.title}>{data.title}</h1>
         <div className={styles.language}>
@@ -39,11 +39,26 @@ export default function Mortgage() {
           </button>
         </div>
       </div>
-      <div className={styles["mortgage-container"]}>
-        <Calculator title={data.calculator.title} form={data.calculator.form} setResult={resultHandler}></Calculator>
-        <Results data={data.results} result={result}></Results>
+      <div className={styles.mortgage}>
+        <div className={styles["mortgage-container"]}>
+          <Calculator title={data.calculator.title} form={data.calculator.form} setResult={resultHandler}></Calculator>
+          <Results data={data.results} result={result}></Results>
+        </div>
       </div>
       <BankLoan className={styles.bank} />
-    </div>
+      <footer className={styles.footer}>
+        <div className={styles.footer__content}>
+          <div className={styles.footer__content__left}></div>
+          <div className={styles.footer__content__right}>
+            <a href={data.footer.sacaloencuotashtml} target="_blank" rel="noreferrer">
+              {data.footer.sacaloencuotas}
+            </a>
+            <a href={data.footer.developerhtml} target="_blank" rel="noreferrer">
+              {data.footer.developer}
+            </a>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }

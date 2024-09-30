@@ -73,8 +73,10 @@
       }
     },
     "footer": {
-      "title": "Calcula tu hipoteca",
-      "description": "Calcula tu hipoteca"
+      "sacaloencuotas": "Sacalo en cuotas",
+      "sacaloencuotashtml": "https://sacaloencuotas.ar",
+      "developer": "Desarrollado por Pedro Henestroza",
+      "developerhtml": "https://soype.ar"
     }
   },
   "en": {
@@ -151,8 +153,10 @@
       }
     },
     "footer": {
-      "title": "Calculate Your Mortgage",
-      "description": "Calculate Your Mortgage"
+      "sacaloencuotas": "Installment calculator",
+      "sacaloencuotashtml": "https://sacaloencuotas.ar",
+      "developer": "Developed by Pedro Henestroza",
+      "developerhtml": "https://soype.ar"
     }
   }
 }
